@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%; }
+
+body {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  color: #114b5f; }
+
+a {
+  color: #114b5f; }
+
+h4 {
+  text-transform: uppercase; }
+
+#wrapper {
+  background: #247ba0;
+  height: 100vh;
+  display: flex;
+  align-content: center;
+  align-items: center; }
+
+.container {
+  max-width: 1080px;
+  width: 100%;
+  position: relative;
+  margin: 0 auto; }
+
+#app-budget {
+  background: #e0e0e0;
+  margin: 0 auto;
+  position: relative; }
+
+#header, #main {
+  padding: 24px 36px; }
+
+#header {
+  display: flex;
+  justify-content: space-between; }
+
+#main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 36px;
+  background: #C9C9C9; }
+  #main > div {
+    border-radius: 3px; }
+  #main .form-header {
+    padding: 4px 0;
+    border-radius: 3px; }
+    #main .form-header.income-title, #main .form-header.expense-title {
+      padding: 8px;
+      border-radius: 3px;
+      color: #e0e0e0; }
+    #main .form-header.income-title {
+      background: #00BC9C; }
+    #main .form-header.expense-title {
+      background: #ff1654; }
+    #main .form-header.total {
+      background: #114b5f; }
+  #main .form-input {
+    display: grid;
+    grid-template-columns: 1fr 60px 50px;
+    grid-gap: 12px;
+    padding: 12px 0; }
+    #main .form-input input {
+      padding: auto;
+      border: none;
+      border-radius: 3px; }
+      #main .form-input input.inputbtn {
+        background: #114b5f;
+        color: #e0e0e0;
+        font-size: 1.8rem; }
+      #main .form-input input.inputtxt, #main .form-input input.inputnmb {
+        background: #A3A4A4; }
+  #main .form-total {
+    display: flex;
+    justify-content: space-between;
+    background: #e0e0e0;
+    padding: 8px 6px; }
+    #main .form-total p:first-child {
+      font-size: 1.4rem; }
+    #main .form-total p:last-child {
+      font-size: 1.8rem;
+      font-weight: 700; }
+  #main .form-details {
+    padding: 12px 0; }
+    #main .form-details__btn {
+      padding: 12px 6px; }
+    #main .form-details ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      #main .form-details ul li {
+        list-style: none;
+        padding: 6px;
+        display: flex;
+        justify-content: space-between; }
+  #main #total-box {
+    background: #247ba0;
+    color: #e0e0e0;
+    height: auto;
+    max-height: 150px;
+    padding: 36px; }
+    #main #total-box .total-results {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 6px 0; }
+      #main #total-box .total-results__text {
+        font-size: 1.4rem; }
+      #main #total-box .total-results__result {
+        font-size: 2.2rem;
+        font-weight: 700; }
+
+/*# sourceMappingURL=style.css.map */

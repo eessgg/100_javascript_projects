@@ -1,0 +1,157 @@
+// variables
+$white: #e0e0e0
+$pink: #ff1654
+$blue-light: #00BC9C
+$blue-medium: #247ba0
+$blue-dark: #114b5f
+$gray-light: #C9C9C9
+$gray-medium: #A3A4A4
+$base-black: #333333
+
+// global
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+
+html, body
+  height: 100%
+
+
+body
+  font-size: 14px
+  font-family: 'Roboto', sans-serif
+  color: $blue-dark
+
+a
+  color: $blue-dark
+
+h4
+  text-transform: uppercase
+
+// base
+#wrapper
+  background: $blue-medium
+  height: 100vh
+  display: flex
+  align-content: center
+  align-items: center
+
+.container
+  max-width: 1080px
+  width: 100%
+  position: relative
+  margin: 0 auto
+
+
+// app
+#app-budget
+  background: $white
+  margin: 0 auto
+  position: relative
+
+// header
+#header, #main
+  padding: 24px 36px
+
+#header
+  display: flex
+  justify-content: space-between
+
+
+// main
+#main
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+  grid-gap: 36px
+  background: $gray-light
+
+  & > div
+    border-radius: 3px
+
+  .form-header
+    padding: 4px 0
+    border-radius: 3px
+
+    &.income-title, &.expense-title
+      padding: 8px
+      border-radius: 3px
+      color: $white
+
+    &.income-title
+      background: $blue-light
+    &.expense-title
+      background: $pink
+    &.total
+      // padding: 4px 0
+      background: $blue-dark
+
+  .form-input
+      display: grid
+      grid-template-columns: 1fr 60px 50px
+      grid-gap: 12px
+      padding: 12px 0
+
+      input
+        padding: auto
+        border: none
+        border-radius: 3px
+
+        &.inputbtn
+          background: $blue-dark
+          color: $white
+          font-size: 1.8rem
+
+        &.inputtxt, &.inputnmb
+          background: $gray-medium
+
+  .form-total
+    display: flex
+    justify-content: space-between
+    background: $white
+    padding: 8px 6px
+
+    p:first-child
+      font-size: 1.4rem
+    
+    p:last-child
+      font-size: 1.8rem
+      font-weight: 700
+
+  .form-details
+    padding: 12px 0
+
+    &__btn
+      padding: 12px 6px
+
+    ul
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+
+      li
+        list-style: none
+        padding: 6px
+        display: flex
+        justify-content: space-between
+
+  #total-box
+    background: $blue-medium
+    color: $white
+    height: auto
+    max-height: 150px
+    padding: 36px
+
+    .total-results
+      display: flex
+      justify-content: space-between
+      border-bottom: 1px solid $white
+      padding: 6px 0
+
+      &__text
+        font-size: 1.4rem
+
+      &__result
+        font-size: 2.2rem
+        font-weight: 700

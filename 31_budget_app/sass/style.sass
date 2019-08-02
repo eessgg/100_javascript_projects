@@ -89,12 +89,12 @@ h4
 
   .form-input
       display: grid
-      grid-template-columns: 1fr 60px 50px
+      grid-template-columns: 1fr 40px 40px
       grid-gap: 12px
       padding: 12px 0
 
       input
-        padding: auto
+        padding: 4px
         border: none
         border-radius: 3px
 
@@ -102,6 +102,7 @@ h4
           background: $blue-dark
           color: $white
           font-size: 1.8rem
+          cursor: pointer
 
         &.inputtxt, &.inputnmb
           background: $gray-medium
@@ -135,6 +136,8 @@ h4
         padding: 6px
         display: flex
         justify-content: space-between
+        background: $white
+        margin: 4px 0
 
   #total-box
     background: $blue-medium

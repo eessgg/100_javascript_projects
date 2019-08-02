@@ -64,17 +64,18 @@ h4 {
       background: #114b5f; }
   #main .form-input {
     display: grid;
-    grid-template-columns: 1fr 60px 50px;
+    grid-template-columns: 1fr 40px 40px;
     grid-gap: 12px;
     padding: 12px 0; }
     #main .form-input input {
-      padding: auto;
+      padding: 4px;
       border: none;
       border-radius: 3px; }
       #main .form-input input.inputbtn {
         background: #114b5f;
         color: #e0e0e0;
-        font-size: 1.8rem; }
+        font-size: 1.8rem;
+        cursor: pointer; }
       #main .form-input input.inputtxt, #main .form-input input.inputnmb {
         background: #A3A4A4; }
   #main .form-total {
@@ -99,7 +100,9 @@ h4 {
         list-style: none;
         padding: 6px;
         display: flex;
-        justify-content: space-between; }
+        justify-content: space-between;
+        background: #e0e0e0;
+        margin: 4px 0; }
   #main #total-box {
     background: #247ba0;
     color: #e0e0e0;

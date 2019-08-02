@@ -1,0 +1,17 @@
+{
+  "name": "31_budget_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "eslint-config-standard": "^13.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ester Gomes <estergomesdesign@gmail.com> (https://estergomes.com/)",
+  "license": "MIT"
+}

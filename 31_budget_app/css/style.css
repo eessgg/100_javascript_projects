@@ -17,23 +17,37 @@ a {
 h4 {
   text-transform: uppercase; }
 
+.red {
+  border: 1px solid red; }
+
+.message-error {
+  background: rgba(250, 100, 100, 0.5);
+  padding: 8px 12px;
+  margin: 12px 0;
+  border-radius: 3px;
+  display: none; }
+
 #wrapper {
   background: #247ba0;
-  height: 100vh;
+  min-height: 100%;
   display: flex;
   align-content: center;
-  align-items: center; }
+  align-items: center;
+  position: relative; }
 
 .container {
   max-width: 1080px;
   width: 100%;
+  height: 100vh;
   position: relative;
   margin: 0 auto; }
 
 #app-budget {
   background: #e0e0e0;
   margin: 0 auto;
-  position: relative; }
+  position: relative;
+  top: 80px;
+  flex-grow: 100; }
 
 #header, #main {
   padding: 24px 36px; }
@@ -70,14 +84,16 @@ h4 {
     #main .form-input input {
       padding: 4px;
       border: none;
-      border-radius: 3px; }
+      border-radius: 3px;
+      overflow: hidden; }
       #main .form-input input.inputbtn {
         background: #114b5f;
         color: #e0e0e0;
         font-size: 1.8rem;
         cursor: pointer; }
       #main .form-input input.inputtxt, #main .form-input input.inputnmb {
-        background: #A3A4A4; }
+        background: #A3A4A4;
+        border: 1px solid rgba(100, 100, 100, 0.2); }
   #main .form-total {
     display: flex;
     justify-content: space-between;
@@ -99,10 +115,32 @@ h4 {
       #main .form-details ul li {
         list-style: none;
         padding: 6px;
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         background: #e0e0e0;
-        margin: 4px 0; }
+        margin: 4px 0;
+        overflow: hidden; }
+        #main .form-details ul li:hover span:last-child {
+          right: 0px; }
+        #main .form-details ul li span {
+          display: flex;
+          align-items: center; }
+          #main .form-details ul li span:last-child {
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+            right: -38px;
+            margin-left: 8px;
+            transition: all 0.3s ease-in-out; }
+            #main .form-details ul li span:last-child .btndelete {
+              background: orange;
+              border-radius: 3px;
+              max-width: 40px;
+              height: 100%;
+              position: relative;
+              padding: 4px 12px;
+              text-align: center;
+              cursor: pointer; }
   #main #total-box {
     background: #247ba0;
     color: #e0e0e0;

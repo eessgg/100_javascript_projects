@@ -7,6 +7,9 @@ $blue-dark: #114b5f
 $gray-light: #C9C9C9
 $gray-medium: #A3A4A4
 $base-black: #333333
+$red-light: rgba(250,100,100,0.5)
+$red: rgb(250,0,0)
+$borderRadius: 3px
 
 // global
 *
@@ -30,17 +33,36 @@ a
 h4
   text-transform: uppercase
 
+
+
+//message alerts
+.red
+  border: 1px solid red
+
+.message-error
+  background: $red-light
+  padding: 8px 12px
+  margin: 12px 0
+  border-radius: $borderRadius
+  display: none
+
+
+
+
+
 // base
 #wrapper
   background: $blue-medium
-  height: 100vh
+  min-height: 100%
   display: flex
   align-content: center
   align-items: center
+  position: relative
 
 .container
   max-width: 1080px
   width: 100%
+  height: 100vh
   position: relative
   margin: 0 auto
 
@@ -50,6 +72,8 @@ h4
   background: $white
   margin: 0 auto
   position: relative
+  top: 80px
+  flex-grow: 100
 
 // header
 #header, #main
@@ -97,6 +121,7 @@ h4
         padding: 4px
         border: none
         border-radius: 3px
+        overflow: hidden
 
         &.inputbtn
           background: $blue-dark
@@ -106,6 +131,7 @@ h4
 
         &.inputtxt, &.inputnmb
           background: $gray-medium
+          border: 1px solid rgba(100,100,100, 0.2)
 
   .form-total
     display: flex
@@ -119,6 +145,8 @@ h4
     p:last-child
       font-size: 1.8rem
       font-weight: 700
+
+
 
   .form-details
     padding: 12px 0
@@ -134,10 +162,38 @@ h4
       li
         list-style: none
         padding: 6px
-        display: flex
-        justify-content: space-between
+        display: grid
+        grid-template-columns: 1fr 1fr
         background: $white
         margin: 4px 0
+        overflow: hidden
+
+        &:hover span:last-child
+          right: 0px
+
+        span
+          display: flex
+          align-items: center
+
+          &:last-child
+            display: flex
+            justify-content: flex-end
+            position: relative
+            right: -38px
+            margin-left: 8px
+            transition: all .3s ease-in-out
+
+            .btndelete
+              background: orange
+              border-radius: 3px
+              max-width: 40px
+              height: 100%
+              position: relative
+              padding: 4px 12px
+              text-align: center
+              // display: block
+              cursor: pointer
+
 
   #total-box
     background: $blue-medium
@@ -158,3 +214,6 @@ h4
       &__result
         font-size: 2.2rem
         font-weight: 700
+
+
+

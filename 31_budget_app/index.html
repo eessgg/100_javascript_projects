@@ -28,21 +28,34 @@
               <h2 class="income-title">Income</h2>
             </div>
             <div class="form-input">
-              <input type="text" class="inputtxt" data-js="income-name" placeholder="Type your income name...">
-              <input type="number" name="" id="" class="inputnmb" data-js="income-value" placeholder="0">
-              <input type="button" value="+" class="inputbtn" data-js="addIncomeBtn">
+              <input
+                type="text"
+                class="inputtxt"
+                data-name="inc-name"
+                placeholder="Type your income name..."
+              >
+              <input
+                type="number"
+                name=""
+                id=""
+                class="inputnmb"
+                data-vl="inc-value"
+                placeholder="0"
+              >
+              <input type="button" value="+" class="inputbtn inc" data-btninc="inc" data-btn="inc">
             </div>
-            <div class="form-total">
+            <div class="form-total inc" data-totalexp="texp">
               <p>TOTAL:</p>
               <p>R$ 1.00</p>
             </div>
+            <div class="message-error"></div>
             <div class="form-details">
               <div class="form-details__btn"> <a href="#"> Income Details </a></div>
-              <ul>
-                <li>Item 1 <span>R$1.00</span></li>
-                <li>Item 1 <span>R$1.00</span></li>
-                <li>Item 1 <span>R$1.00</span></li>
-                <li>Item 1 <span>R$1.00</span></li>
+              <ul class="list-output-inc">
+                <!-- <li> <span>Item 1</span>  <span>R$1.00<span class="btndelete">x</span></span> </li>
+                <li> <span>Item 1</span>  <span>R$1.00<span class="btndelete">x</span></span> </li>
+                <li> <span>Item 1</span>  <span>R$1.00<span class="btndelete">x</span></span> </li>
+                <li> <span>Item 1</span>  <span>R$1.00<span class="btndelete">x</span></span> </li> -->
               </ul>
             </div>
           </div>
@@ -50,19 +63,35 @@
             <div class="form-header  expense-title">
               <h2 class="exp">Expenses</h2>
             </div>
-            <div class="form-input">
-              <input type="text" class="inputtxt" data-js="expense-name" placeholder="Type your income name...">
-              <input type="number" name="" id="" class="inputnmb" data-js="expense-value" placeholder="0">
-              <input type="button" value="+" class="inputbtn" data-js="addExpenseBtn" >
+            <div class="form-input" data-form="form">
+              <input
+                type="text"
+                class="inputtxt"
+                data-nameexp="exp-name"
+                placeholder="Type your income name..."
+                required
+              >
+              <input
+                type="number"
+                name=""
+                id=""
+                class="inputnmb"
+                data-vlexp="exp-value"
+                placeholder="0"
+              >
+              <input type="button" value="-" class="inputbtn exp" data-btnexp="exp" data-btn="exp">
             </div>
             <div class="form-total">
               <p>TOTAL:</p>
               <p class="soma">R$ 0.00</p>
             </div>
+            <!-- <div class="message-error"></div> -->
             <div class="form-details">
               <div class="form-details__btn"> <a href="#"> Expense Details </a></div>
-              <ul class="list-output">
+              <ul class="list-output-exp">
                 <!-- <li>Item 1 <span>R$1.00</span></li>
+                <li>Item 1 <span>R$1.00</span></li>
+                 <li>Item 1 <span>R$1.00</span></li>
                 <li>Item 1 <span>R$1.00</span></li>
                 <li>Item 1 <span>R$1.00</span></li>
                 <li>Item 1 <span>R$1.00</span></li> -->

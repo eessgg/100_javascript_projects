@@ -1,56 +1,97 @@
-const incomeName = document.querySelector('[data-js="income-name"]')
-const addIncomeBtn = document.querySelector('[data-js="addIncomeBtn"]')
-const addExpenseBtn = document.querySelector('[data-js="addExpenseBtn"]')
+
+const incName = document.querySelector('[data-name="inc-name"]')
+const incValue = document.querySelector('[data-vl="inc-value"]')
+const expName = document.querySelector('[data-nameexp="exp-name"]')
+const expValue = document.querySelector('[data-vlexp="exp-value"]')
+const incBtn = document.querySelector('[data-btninc="inc"]')
+const expBtn = document.querySelector('[data-btnexp="exp"]')
+// const formInput = document.querySelector('.form-input')
+const totalSoma = document.querySelector('[data-totalexp="texp"]')
+const totalresults = document.querySelector('.total-results__result')
+const deleteBtn = document.querySelector('.btndelete')
+const messageError = document.querySelector('.message-error')
+
+
 let values = []
 
-loadEvents()
-function loadEvents() {
-  addExpenseBtn.addEventListener('click', addExpenses)
-  addIncomeBtn.addEventListener('click', addIncomes)
+function loadEvents () {
+  incBtn.addEventListener('click', function (e) {
+    e.preventDefault()
+    getBudgetValue(incName, incValue, incBtn)
+  })
+  expBtn.addEventListener('click', function (e) {
+    e.preventDefault()
+    getBudgetValue(expName, expValue, expBtn)
+    console.log('as')
+  })
+  deleteBtn.addEventListener('click', deleteListItem)
 }
 
-function addExpenses(e) {
-  e.preventDefault()
-  let expenseObj
-  const expenseName = document.querySelector('[data-js="expense-name"]').value
-  const expenseValue = document.querySelector('[data-js="expense-value"]').value
-
-  if(expenseName === '' ||  expenseValue === '0' || expenseValue === '0' ) {
-    alert('no')
-    document.location.reload()
+function getBudgetValue (inputname, inputValue, button) {
+  if (inputname.value === '' && inputValue.value === '') {
+    console.log('empty')
+    showError(inputname, inputValue)
   } else {
-    expenseObj = {
-      name: expenseName,
-      value: expenseValue
-    }
+    const budgetObj = { name: inputname.value, value: inputValue.value }
+    showList(budgetObj, button)
   }
 
-  return showListExpense(expenseObj)
+  inputname.value = ''
+  inputValue.value = ''
 }
 
-function showListExpense(obj) {
-  const listOutput = document.querySelector('.list-output')
-  let value = obj.value
-  
-  let listElement = `
-    <li> ${obj.name} <span>R$ ${obj.value} </span></li>
+function showList (obj, button) {
+  const listOutput = document.querySelector(`.list-output-${button.dataset.btn}`)
+  let listElement = ''
+  listElement = `
+    <li> <span>${obj.name}</span>  <span>R$ ${obj.value}<span class="btndelete">x</span></span> </li>
   `
   listOutput.innerHTML += listElement
 
-  calcExpense(value)
+  if (button.value === '+') {
+    console.log('as')
+  }
+  return calcExpense(obj)
 }
 
-function calcExpense(value) {
-  const totalSoma = document.querySelector('.form-total .soma')
-
+function calcExpense (value) {
+  const valuesObj = []
   values.push(value)
+  values.map(vl => {
+    console.log(vl.value)
+    valuesObj.push(vl.value)
+  })
 
-  let somaResult = values.reduce(somaVl)
-  console.log(somaResult)
-
-  totalSoma.innerHTML = `R$ (-) ${somaResult}`
+  const somaResult = valuesObj.reduce(somaVl)
+  totalSoma.innerHTML = `<p>Total: </p> <p>R$ (+) ${somaResult}</p>`
+  totalresults.innerHTML = `R$ ${somaResult}`
 }
 
-function somaVl(total, num) {
-  return parseFloat(parseFloat(total) + parseFloat(num));
+function somaVl (total, num) {
+  return parseFloat(parseFloat(total) + parseFloat(num))
 }
+
+function showError (inputname, inputValue) {
+  inputname.style.border = '1px solid rrgb(250,0,0)'
+  inputname.style.backgroundColor = 'rgba(250,100,100,0.5)'
+  inputValue.style.border = '1px solid rrgb(250,0,0)'
+  inputValue.style.backgroundColor = 'rgba(250,100,100,0.5)'
+  messageError.style.display = 'block'
+  messageError.textContent = 'Please, enter some name and value.'
+  setTimeout(() => {
+    inputname.style.border = '1px solid rgba(100,100,100, 0.2)'
+    inputname.style.backgroundColor = '#A3A4A4'
+    inputValue.style.border = '1px solid rgba(100,100,100, 0.2)'
+    inputValue.style.backgroundColor = '#A3A4A4'
+    messageError.style.display = 'none'
+  }, 3000)
+}
+
+
+function deleteListItem(e) {
+  e.preventDefault()
+  console.log(e.target.parentElement)
+}
+
+
+window.addEventListener('DOMContentLoaded', loadEvents)

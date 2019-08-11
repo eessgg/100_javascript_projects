@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background: #333;
+}
+.main {
+ 
+  width: 400px;
+  height: 175px;
+  margin: 100px auto;
+  position: relative;
+  padding: 30px;
+  color: aqua;
+  font-family:Abel;
+}
+.badge  {
+  width: 96px;
+  background: #e66357;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.clock {
+  background-attachment: #ebebeb;
+  text-align: center;
+  font-size: 65px;
+  height: 100%;
+  padding-top: 25px;
+}

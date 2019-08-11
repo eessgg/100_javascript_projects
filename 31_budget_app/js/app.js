@@ -8,9 +8,9 @@ const expBtn = document.querySelector('[data-btnexp="exp"]')
 // const formInput = document.querySelector('.form-input')
 const totalSoma = document.querySelector('[data-totalexp="texp"]')
 const totalresults = document.querySelector('.total-results__result')
-const deleteBtn = document.querySelector('.btndelete')
-const messageError = document.querySelector('.message-error')
+const deleteBtn = document.querySelectorAll('.btndelete')
 
+const messageError = document.querySelector('.message-error')
 
 let values = []
 
@@ -24,7 +24,9 @@ function loadEvents () {
     getBudgetValue(expName, expValue, expBtn)
     console.log('as')
   })
-  deleteBtn.addEventListener('click', deleteListItem)
+  deleteBtn.forEach(function(dlBtn) {
+    dlBtn.addEventListener('click', deleteListItem)
+  })
 }
 
 function getBudgetValue (inputname, inputValue, button) {
@@ -51,7 +53,9 @@ function showList (obj, button) {
   if (button.value === '+') {
     console.log('as')
   }
-  return calcExpense(obj)
+  
+  calcExpense(obj)
+  loadEvents()
 }
 
 function calcExpense (value) {
@@ -88,10 +92,16 @@ function showError (inputname, inputValue) {
 }
 
 
-function deleteListItem(e) {
+function deleteListItem (e) {
   e.preventDefault()
-  console.log(e.target.parentElement)
-}
+  e.stopPropagation()
 
+  if (e.target.classList.contains('btndelete')) {
+    // e.target.parentElement.parentElement.remove()
+  }
+  console.log('parent')
+
+  // parent.remove()
+}
 
 window.addEventListener('DOMContentLoaded', loadEvents)

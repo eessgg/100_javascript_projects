@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>digital-clock</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="main">
+    <div class="badge">
+      Clock
+    </div>
+    <div class="clock">
+      <span id="hour"></span>
+      <span id="minute"></span>
+      <span id="second"></span>
+    </div>
+  </div>
+  
+  <script>
+    
+    
+    function clock(){
+      const date = new Date();
+      var mins = date.getMinutes();
+      var secs = date.getSeconds();
+      var hours = date.getHours();
+
+      if(hours < 10){
+        hours = "0" + hours;
+      }
+      if(mins < 10){
+        mins = "0" + mins;
+      }
+      if(secs < 10){
+        secs = "0" + secs;
+      }
+
+      document.getElementById('hour').innerHTML = hours;
+      document.getElementById('minute').innerHTML =':'+ secs;
+      document.getElementById('second').innerHTML =':'+ mins;
+    }
+
+    setInterval(clock, 1000);
+
+
+  </script>
+</body>
+</html>

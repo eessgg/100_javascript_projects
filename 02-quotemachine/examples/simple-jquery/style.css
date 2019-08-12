@@ -1,0 +1,68 @@
+body {
+    font-family: 'Open Sans', sans-serif;font-weight: 600;
+    margin: 0 auto;
+    text-align: center;
+    background: #f7d1e6 url('img/bg.gif') no-repeat left top;
+    background-size: cover;
+}
+
+.wrapper {
+    width: 70%;
+    min-height: 600px;
+    margin: 180px auto;
+}
+.wrapper h1 {font-family: 'Holtwood One SC', serif; color: #1e4192;}
+
+.front {
+    background: #f7f7f7;
+    border-radius: 1px;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 50px;
+
+}
+.quote {    
+    color: #1e4192;
+    font-size: 20px;
+    transition: 0.2s all ease-in;
+    font-weight: 600;position: relative;
+}
+.quote p {
+    margin-bottom: 0;
+}
+#author {
+    font-size: 16px; 
+    margin: 0;
+    color: grey;
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+
+button {
+    background: #1e4192;
+    color: #f7f7f7;
+    font-size: 20px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    padding:15px 35px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    cursor: pointer; font-weight: 700;
+}
+a.share-quote {
+    background: #d882c8;
+    color: #f7f7f7; text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    padding: 10px 25px;
+    margin: 20px;
+    position: relative;
+    text-align: center;
+    top:10px;
+    width: 100%;
+}
+
+

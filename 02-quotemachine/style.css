@@ -1,0 +1,74 @@
+body {
+    font-family: 'Open Sans', sans-serif;font-weight: 600;
+    margin: 0 auto;
+    text-align: center;
+    background: #f7d1e6;
+}
+
+.wrapper {
+    width: 70%;
+    min-height: 600px;
+    margin: 180px auto;
+}
+.wrapper h1 {font-family: 'Holtwood One SC', serif; color: #1e4192;}
+
+.quote {
+    background: #f7f7f7;
+    border-radius: 1px;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 36px;
+    transition: 0.2s all ease-in;
+    position: relative;
+}
+.quote p {
+    margin-bottom: 0;
+}
+
+.quote-text {
+    color: #1e4192;
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 18px;
+}
+.quote-author {
+    font-size: 16px; margin: 0;
+    color: #e07fb2;
+    text-transform: uppercase;
+}
+.quote-author::before {
+    content: ' - '
+}
+.quote-author::after {
+    content: ' - '
+}
+
+button {
+    background: #1e4192;
+    color: #f7f7f7;
+    font-size: 20px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    padding:15px 35px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 700;
+}
+a.twitter-share-button {
+    background: #d882c8;
+    color: #f7f7f7; text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    padding: 10px 25px;
+    margin: 20px;
+    position: relative;
+    text-align: center;
+    top:10px;
+    width: 100%;
+}
+
+

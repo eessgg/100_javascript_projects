@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.2rem;
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #555;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.medium-text {
+  font-weight: 500;
+}
+
+#wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+
+h1 { font-size: 2.8rem;  line-height: 24px;}
+h2 { font-size: 2.6rem; }
+h3 { font-size: 2.2rem; }
+
+pre {
+  font-size: 100%;
+}
+
+.logo {
+  font-family: 'Rubik Mono One', sans-serif;
+}
+.container {
+  /* max-width: 1280px; */
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.btn {
+  width: 100%;
+  min-height: 80px;
+  margin: 12px 0;
+  padding: 8px 15px;
+  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+  color: #eb4073;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.8rem;
+  box-shadow: 0px 8px 0px #e0d0d5;
+
+  &:active {
+    outline: none;
+    box-shadow: 0px 0px 0px #fa709a;
+    transform: translateY(5px);
+  }
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+  }
+}
+
+

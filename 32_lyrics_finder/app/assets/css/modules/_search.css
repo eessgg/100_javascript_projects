@@ -1,0 +1,96 @@
+
+.serch-area {
+  /* padding: 48px; */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  
+  &__lyric, &__input {
+    border-radius: 12px;
+    padding: 32px;
+  }
+  &__input {
+    margin-right: 24px;
+    width: 45%;
+    background: #fff;
+    
+    & > div {
+      align-content: center;
+      align-items: center;
+    }
+
+    & > * {
+      padding-bottom: 12px;
+      position: relative;
+    }
+  }
+
+
+  &__lyric {
+    background: #fff;
+    width: 50%;
+    max-height: 500px;
+    line-height: 2.2rem;
+    font-size: 18px;
+    text-align: left;
+    overflow-y: scroll;
+
+    h2 {
+      padding-bottom: 12px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 12px;
+      background-color: #F5F5F5;
+    }
+    &::-webkit-scrollbar-thumb {
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      background-color: #fa709a;
+    }
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 16px rgba(0,0,0,0.3);
+      background-color: #F5F5F5;
+    }
+  }
+
+  label {
+    text-transform: uppercase;
+    color: #eb4073;
+    font-size:1.3rem;
+    font-weight:600;
+  }
+
+  input {
+    max-width: 400px;
+    width: 100%;
+    padding: 24px;
+    margin: 12px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    border-bottom: 1px solid #bbb;
+    transition: all .2s ease-in;
+    color: #fa709a;
+
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid #fa709a;
+    }
+  }
+}
+
+.errorMsgArt, .errorMsgTrk {
+  padding: 15px 8px;
+  background: rgba(255, 0, 0, 0.2);
+  color: rgb(255, 38, 0);
+  border: 1px solid rgba(255, 0, 0, 0.2);
+  border-radius: 5px;
+  display: none;
+  position: relative;
+}

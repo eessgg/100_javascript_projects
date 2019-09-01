@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Blog Posts </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div id="blog-wrapper">
+
+    <div class="blog-container">
+      <div class="container">
+        <div class="input-container">
+          <header>
+            <h1 class="title has-text-centered">
+              Blog Posts
+            </h1>
+          </header>
+          <main>
+            <form id="form">
+              <label for="titleInput">Título</label>
+              <input class="u-full-width" type="text" placeholder="Digite o título do post" id="titleInput">
+
+              <label for="messageInput">Conteúdo do blog</label>
+              <textarea class="u-full-width" placeholder="Coomo estou hoje..." id="messageInput"></textarea>
+              <input id="submit" class="button-primary" type="submit" value="Submit">
+              <p class="error-warning"></p>
+            </form>
+          </main>
+        </div>
+      </div>
+    </div>
+    <div class="blog-posts">
+      <div class="container">
+        <div class="posts-output">
+            <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt saepe culpa quisquam possimus obcaecati,
+            voluptatibus et, laboriosam consequatur nihil expedita velit, perferendis incidunt modi a? Asperiores
+            voluptates accusantium quae architecto. -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>

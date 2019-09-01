@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Tip CALC</title>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"> -->
+  <link href="https://fonts.googleapis.com/css?family=Heebo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="rows">
+
+      <div class="row">
+        <header class="section">
+          <div class="container">
+            <h1 class="title">Tip Calculator &#x1F424;</h1>
+          </div>
+        </header>
+
+        <div class="section">
+          <div class="container">
+
+            <form id="form">
+              <fieldset class="fieldset">
+                <label class="label"> Bill Amount </label>
+                <div class="control">
+                  <input class="input" data-js="bill-input" type="number" placeholder="Ex: 19.00">
+                </div>
+              </fieldset>
+
+              <fieldset class="fieldset">
+                <label class="label">Qual sua nota pelo atendimento? </label>
+                <div class="control">
+                  <div class="select">
+                    <select data-js="select">
+                      <option value="15">Ótimo! (15%)</option>
+                      <option value="10"> Ok /Bom! (10%)</option>
+                      <option value="5"> Insatisfatório. (5%)</option>
+                    </select>
+                  </div>
+                </div>
+
+              </fieldset>
+              <fieldset class="fieldset">
+                <label class="label">Quantas pessoas? </label>
+                <div class="control">
+                  <input class="input is-success" data-js="people-input" type="number" placeholder="Ex: 2 pessoas">
+                </div>
+              </fieldset>
+
+
+              <fieldset class="fieldset is-grouped">
+                <div class="control">
+                  <input type="submit" class="button btn-primary" value="Calc Tip" />
+                  <input type="submit" class="button btn-regular" value="Cancel" />
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <section class="section card-tip">
+          <header class="header">
+            <h2 class="title is-4">O valor total:</h2>
+          </header>
+
+          <div class="content">
+            <p class="subtitle is-5">Tip Value:  <span class="tip-result"> 0.00 </span></p>
+            <p class="subtitle is-5">Total amount: <span class="total-result"> 0.00 </span></p>
+          </div>
+
+        </section>
+      </div>
+    </div>
+  </div>
+
+
+
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>

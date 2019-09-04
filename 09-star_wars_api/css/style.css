@@ -1,0 +1,129 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  /* Set neon color */
+  --neon-text-color1: rgb(253, 130, 85);
+  --neon-text-color2: #f40;
+  --neon-border-color: #08f;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #000;
+}
+
+.wrapper {
+  background: #000;
+  /* background-image: url('../img/bg.png'); */
+  /* background-image: linear-gradient(60deg, #000000 0%, #111111 100%); */
+  /* height: 100vh; */
+}
+
+.container {
+  padding: 24px;
+  text-align: center;
+  max-width: 1080px;
+  height: auto;
+  display: block;
+}
+
+#output {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: auto;
+}
+
+.title {
+  color: yellow;
+  /* font-size: 2rem; */
+  font-weight: 200;
+  font-style: italic;
+  color: #fff;
+  padding: 4rem 6rem 5.5rem;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  animation: flicker 1.5s infinite alternate;
+  /* text-shadow: 0 0 1rem var(--neon-text-color); */
+  text-shadow:
+    0 0 10px var(--neon-text-color2),
+    0 0 10px var(--neon-text-color1),
+    0 0 20px var(--neon-text-color2);
+  will-change: filter, color;
+  filter: saturate(60%);
+  animation: flicker steps(100) var(--interval) 1s infinite;
+}
+
+.title::-moz-selection {
+  background-color: var(--neon-border-color);
+  color: var(--neon-text-color);
+}
+
+.title::selection {
+  background-color: var(--neon-border-color);
+  color: var(--neon-text-color);
+}
+
+.title:focus {
+  outline: none;
+}
+
+.btn {
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  box-shadow:
+    0px 0px 5px rgb(132, 41, 236),
+    0px 0px 5px rgb(102, 37, 255);
+  border: 0;
+  color: rgb(210, 172, 241);
+  letter-spacing: 0.4rem;
+  font-size: 18px;
+}
+
+.btn a {
+  color: yellow;
+}
+
+.btn:hover a {
+  color: yellow;
+}
+
+.btn:focus a {
+  color: yellow;
+}
+
+.card {
+  background: #2575fc;
+  color: rgb(22, 21, 21);
+  width: 320px;
+  height: auto;
+  margin: 12px 0;
+  text-align: left;
+  box-shadow:
+    0px 0px 5px rgb(41, 174, 236),
+    0px 0px 5px rgb(0, 238, 255);
+  border-radius: 5px;
+  padding: 24px;
+}
+
+.card p {
+  margin-bottom: 1rem;
+}
+
+
+
+/* Animate neon flicker */
+@keyframes flicker {
+  50% {
+    color: white;
+    filter: saturate(200%) hue-rotate(20deg);
+  }
+}

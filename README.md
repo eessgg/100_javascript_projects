@@ -6,7 +6,16 @@
 
 **32. Lyrics Finder** :notes:
 
-**33. Data Visualization Projects FCC** :construction:
+**33. 33. Blog Post**
+  - LocalStorage
+**34. Tip Calculator**
+**35. Tic Tac Toe Game**
+  - pause
+
+
+
+
+Data Visualization Projects FCC** :construction:
   REF: https://learn.freecodecamp.org
   - Visualize Data with a Bar Chart
   - Visualize Data with a Scatterplot Graph

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Faves! Bookmarker</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Sriracha&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <section class="section" id="wrapper">
+    <div class="container">
+
+      <div class="rows">
+        <div class="row">
+          <header class="header">
+            <div class="hero-body">
+              <h1 class="title"> Bookmarker</h1>
+              <h2 class="subtitle"> Your Favorite Sites</h2>
+            </div>
+          </header>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
+
+          <section class="form">
+            <form id="myForm">
+              <div class="field">
+                <label class="label"> Site Name </label>
+                <div class="control">
+                  <input type="text" class="input" id="siteName" placeholder="Website Name">
+                </div>
+              </div>
+              <div class="field">
+                <label class="label"> Site URL </label>
+                <div class="control">
+                  <input type="text" class="input" id="siteUrl" placeholder="Website URL">
+                </div>
+              </div>
+
+              <div class="field">
+                <div class="control">
+                  <button class="button is-link">Submit</button>
+                </div>
+              </div>
+            </form>
+          </section>
+        </div>
+        <div class="column">
+
+          <div id="bookmarksResults">
+            <!-- content  -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
